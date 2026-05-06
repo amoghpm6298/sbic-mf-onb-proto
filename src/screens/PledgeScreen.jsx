@@ -136,6 +136,30 @@ export default function PledgeScreen({ direction, selectedFunds, creditLimit, on
   const [doneSteps, setDoneSteps] = useState([])
   const [processingDone, setProcessingDone] = useState(false)
 
+  // Body scroll lock when OTP phase active — prevents iOS keyboard from scrolling background
+  useEffect(() => {
+    if (phase === 'otp') {
+      const scrollY = window.scrollY
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.width = '100%'
+      document.body.style.overflow = 'hidden'
+    } else {
+      const top = document.body.style.top
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      document.body.style.overflow = ''
+      if (top) window.scrollTo(0, parseInt(top) * -1)
+    }
+    return () => {
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      document.body.style.overflow = ''
+    }
+  }, [phase])
+
   const pledgedFunds = MF_PORTFOLIO.filter(f => selectedFunds.includes(f.id))
   const totalValue = pledgedFunds.reduce((s, f) => s + f.currentValue, 0)
 

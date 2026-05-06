@@ -86,6 +86,30 @@ export default function CardEligibilityScreen({ direction, creditLimit, onNext }
     }
   }
 
+  // Body scroll lock when any sheet is open — prevents iOS keyboard from scrolling background
+  useEffect(() => {
+    if (sheet) {
+      const scrollY = window.scrollY
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.width = '100%'
+      document.body.style.overflow = 'hidden'
+    } else {
+      const top = document.body.style.top
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      document.body.style.overflow = ''
+      if (top) window.scrollTo(0, parseInt(top) * -1)
+    }
+    return () => {
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      document.body.style.overflow = ''
+    }
+  }, [sheet])
+
   // Focus first OTP input when sheet opens (once only)
   useEffect(() => {
     if (sheet === 'otp') {
