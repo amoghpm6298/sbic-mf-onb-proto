@@ -508,13 +508,15 @@ export default function MFPortfolioScreen({ direction, selectedFunds, setSelecte
         >
           <div className="sa-left">
             <div>
-              <div className="sa-title">Use All Eligible Funds</div>
+              <div className="sa-title-row">
+                <div className="sa-title">Use All Eligible Funds</div>
+                <div className="sa-badge">Recommended</div>
+                <InfoIcon onClick={() => showInfo('security')} />
+              </div>
               <div className="sa-sub">{PLEDGEABLE_FUNDS.length} funds · Max credit {fmtINR(MAX_CREDIT_LIMIT)}</div>
             </div>
           </div>
           <div className="sa-right">
-            <div className="sa-badge">Recommended</div>
-            <InfoIcon onClick={() => showInfo('security')} />
             <div className={`sa-check ${selectAll ? 'checked' : ''}`}>
               {selectAll && (
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">

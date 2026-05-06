@@ -366,6 +366,13 @@
   border-color: #1FA8E1;
 }
 
+.sa-title-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+
 .sa-title {
   font-size: 14px;
   font-weight: 700;
