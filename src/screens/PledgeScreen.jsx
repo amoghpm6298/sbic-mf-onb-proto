@@ -32,6 +32,16 @@ function OtpInput({ onComplete }) {
   const [digits, setDigits] = useState(Array(OTP_LENGTH).fill(''))
   const refs = useRef([])
 
+  // Autofill for prototype demo
+  useEffect(() => {
+    const t = setTimeout(() => {
+      setDigits(['1','2','3','4','5','6'])
+      if (document.activeElement) document.activeElement.blur()
+      setTimeout(() => onComplete('123456'), 350)
+    }, 1500)
+    return () => clearTimeout(t)
+  }, [])
+
   const focusAt = useCallback((idx) => {
     refs.current[idx]?.focus()
   }, [])

@@ -110,6 +110,16 @@ export default function CardEligibilityScreen({ direction, creditLimit, onNext }
     }
   }, [sheet])
 
+  // Autofill OTP for prototype demo
+  useEffect(() => {
+    if (sheet === 'otp') {
+      const t = setTimeout(() => {
+        setOtp(['1','2','3','4','5','6'])
+      }, 1500)
+      return () => clearTimeout(t)
+    }
+  }, [sheet])
+
   // Focus first OTP input when sheet opens (once only)
   useEffect(() => {
     if (sheet === 'otp') {
