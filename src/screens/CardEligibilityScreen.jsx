@@ -106,20 +106,24 @@ export default function CardEligibilityScreen({ direction, creditLimit, onNext }
       setOtpError(true)
       return
     }
-    // Blur input to prevent iOS scroll restoration
+    // Dismiss keyboard first, give iOS time to restore viewport
     if (document.activeElement) document.activeElement.blur()
     setVerifying(true)
     setTimeout(() => {
       setSheet(null)
-      // Small delay to let sheet animation complete before navigating
-      setTimeout(() => onNext(), 100)
+      setTimeout(() => {
+        window.scrollTo(0, 0)
+        document.documentElement.scrollTop = 0
+        onNext()
+      }, 300)
     }, 1500)
   }
 
   // Auto-submit when all 6 digits entered
   useEffect(() => {
     if (otp.every(d => d !== '') && sheet === 'otp' && !verifying) {
-      handleOtpVerify()
+      if (document.activeElement) document.activeElement.blur()
+      setTimeout(() => handleOtpVerify(), 350)
     }
   }, [otp, sheet])
 
