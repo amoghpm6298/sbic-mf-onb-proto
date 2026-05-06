@@ -1,0 +1,415 @@
+/* Review phase */
+.pledge-cl-card {
+  background: linear-gradient(135deg, #0a0825 0%, #1a1652 100%);
+  border-radius: 18px;
+  padding: 24px 20px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.pcl-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.pcl-amount {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1FA8E1;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.pcl-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  font-weight: 500;
+}
+
+.pledged-fund-list {
+  background: #f8f9fa;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 4px 16px;
+  margin-bottom: 20px;
+}
+
+.pledged-fund-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.pledged-fund-row:last-child { border-bottom: none; }
+
+.pf-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.pf-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.pf-dot.equity { background: #1FA8E1; }
+.pf-dot.debt { background: #16a34a; }
+
+.pf-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a2e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pf-meta {
+  font-size: 11px;
+  color: #999;
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+.pf-cl {
+  text-align: right;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.pf-cl-val {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1FA8E1;
+}
+
+.pf-cl-ltv {
+  font-size: 10px;
+  color: #bbb;
+  font-weight: 500;
+}
+
+/* Explainer */
+.pledge-explainer {
+  background: #f8f9fa;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 18px 18px;
+  margin-bottom: 16px;
+}
+
+.pe-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+}
+
+.pe-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 13px;
+  color: #444;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.pe-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.pe-icon.green { background: #f0fdf4; }
+.pe-icon.yellow { background: #fffbeb; }
+
+.pledge-secure-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #888;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* OTP phase */
+.otp-phase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.otp-lock-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.otp-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0 0 10px;
+}
+
+.otp-subtitle {
+  font-size: 14px;
+  color: #666;
+  font-weight: 450;
+  line-height: 1.55;
+  margin: 0 0 16px;
+  max-width: 280px;
+}
+
+.otp-funds-summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0369a1;
+  margin-bottom: 28px;
+}
+
+.otp-boxes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.otp-box {
+  width: 42px;
+  height: 52px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-align: center;
+  background: #fafafa;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+  caret-color: transparent;
+}
+
+.otp-box:focus {
+  border-color: #1FA8E1;
+  background: #f0f9ff;
+}
+
+.otp-box.filled {
+  border-color: #1FA8E1;
+  background: #f0f9ff;
+  color: #1a1a2e;
+}
+
+.otp-resend {
+  font-size: 13px;
+  color: #888;
+  margin: 0 0 24px;
+}
+
+.otp-resend-timer {
+  font-weight: 700;
+  color: #555;
+}
+
+.otp-resend-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1FA8E1;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.otp-info-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  background: #f8f9fa;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 11.5px;
+  color: #888;
+  font-weight: 450;
+  line-height: 1.5;
+  text-align: left;
+  max-width: 300px;
+}
+
+.otp-info-note svg { margin-top: 1px; flex-shrink: 0; }
+
+/* Processing phase */
+.pledge-processing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 460px;
+  text-align: center;
+  background: #fff;
+  padding: 0 4px;
+}
+
+.concentric-wrap {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.concentric-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+}
+
+.c1 { width: 180px; height: 180px; }
+.c2 { width: 140px; height: 140px; }
+.c3 { width: 100px; height: 100px; }
+.c4 { width: 64px; height: 64px; }
+
+.center-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1FA8E1;
+  position: relative;
+  z-index: 2;
+}
+
+.center-check {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.proc-text-wrap { margin-bottom: 24px; }
+
+.proc-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1FA8E1;
+  margin: 0;
+}
+
+.proc-title-success { color: #16a34a; }
+
+.proc-sub {
+  font-size: 13px;
+  color: #999;
+  margin-top: 6px;
+}
+
+.pledge-step-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.vc-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #f8f9fa;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ccc;
+  transition: all 0.3s;
+}
+
+.vc-pill.active {
+  color: #1a1a2e;
+  border-color: #1FA8E1;
+  background: #f0f9ff;
+}
+
+.vc-pill.done {
+  color: #16a34a;
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+}
+
+.vc-pill span { flex: 1; text-align: left; }
+
+/* SEBI badge */
+.sebi-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: #f8f9fa;
+  border: 1px solid #f0f0f0;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.sebi-icon { flex-shrink: 0; }
+
+.sebi-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sebi-main {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+.sebi-sub {
+  font-size: 11px;
+  color: #999;
+  font-weight: 500;
+}

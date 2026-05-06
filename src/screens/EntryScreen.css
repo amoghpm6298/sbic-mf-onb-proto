@@ -1,0 +1,243 @@
+.hero-section {
+  text-align: center;
+  padding: 4px 0 24px;
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 170px;
+  margin-bottom: 20px;
+}
+
+.hero-card-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-main-card {
+  width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+.hero-fd-badge {
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+  background: #fff;
+  border: 1px solid #e8f5e9;
+  border-radius: 12px;
+  padding: 8px 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  z-index: 2;
+}
+
+.fd-badge-rate {
+  font-size: 18px;
+  font-weight: 800;
+  color: #16a34a;
+  line-height: 1;
+}
+
+.fd-badge-label {
+  font-size: 9px;
+  color: #999;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.hero-cl-badge {
+  position: absolute;
+  right: 0;
+  top: 12px;
+  background: #fff;
+  border: 1px solid #e0f2fe;
+  border-radius: 12px;
+  padding: 8px 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  z-index: 2;
+}
+
+.cl-badge-val {
+  font-size: 14px;
+  font-weight: 800;
+  color: #1FA8E1;
+  line-height: 1;
+}
+
+.cl-badge-label {
+  font-size: 9px;
+  color: #999;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.entry-title {
+  font-size: 24px !important;
+  font-weight: 800;
+  color: #1a1a2e !important;
+  margin-bottom: 10px !important;
+  line-height: 1.25;
+}
+
+.entry-tagline {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.6;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.card-benefits {
+  margin-bottom: 24px;
+}
+
+.card-ben-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+.card-ben-row:last-child { border-bottom: none; }
+
+.ben-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #f0f9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-ben-text { flex: 1; min-width: 0; }
+.card-ben-title { font-size: 14px; font-weight: 700; color: #1a1a2e; margin-bottom: 2px; }
+.card-ben-desc { font-size: 12px; color: #999; line-height: 1.4; }
+
+.steps-visual { margin-bottom: 20px; }
+
+.step-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+.step-row:last-child { border-bottom: none; }
+
+.step-num {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background: #1FA8E1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.step-info { flex: 1; }
+.step-title { font-size: 14px; font-weight: 700; color: #1a1a2e; margin-bottom: 1px; }
+.step-desc { font-size: 12px; color: #999; }
+
+.trust-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 12px;
+  background: #f8f9fa;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.trust-divider {
+  width: 1px;
+  height: 18px;
+  background: #e0e0e0;
+}
+
+.trust-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #ccc;
+  justify-content: center;
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.next-step-card {
+  background: #f8f9fa;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 8px;
+}
+
+.nsc-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.nsc-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nsc-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #888;
+}
+
+.nsc-step.active {
+  color: #1a1a2e;
+}
+
+.nsc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1FA8E1;
+  flex-shrink: 0;
+}
+
+.nsc-dot.dim {
+  background: #ddd;
+}
+
+.nsc-time {
+  font-size: 11px;
+  color: #1FA8E1;
+  font-weight: 500;
+  margin-left: 4px;
+}
