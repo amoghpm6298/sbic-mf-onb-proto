@@ -507,13 +507,6 @@ export default function MFPortfolioScreen({ direction, selectedFunds, setSelecte
           onClick={handleToggleAll}
         >
           <div className="sa-left">
-            <div className={`sa-check ${selectAll ? 'checked' : ''}`}>
-              {selectAll && (
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M2 6L5 9L10 3" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              )}
-            </div>
             <div>
               <div className="sa-title">Use All Eligible Funds</div>
               <div className="sa-sub">{PLEDGEABLE_FUNDS.length} funds · Max credit {fmtINR(MAX_CREDIT_LIMIT)}</div>
@@ -522,6 +515,13 @@ export default function MFPortfolioScreen({ direction, selectedFunds, setSelecte
           <div className="sa-right">
             <div className="sa-badge">Recommended</div>
             <InfoIcon onClick={() => showInfo('security')} />
+            <div className={`sa-check ${selectAll ? 'checked' : ''}`}>
+              {selectAll && (
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 6L5 9L10 3" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              )}
+            </div>
           </div>
         </motion.div>
 
