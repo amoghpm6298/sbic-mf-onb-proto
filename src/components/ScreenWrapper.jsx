@@ -14,11 +14,17 @@ export default function ScreenWrapper({ direction, dark, children, bottomBar }) 
   useEffect(() => {
     const el = scrollRef.current
     if (!el) return
-    el.scrollTo(0, 0)
+    // Reset both the scroll container and the window (iOS keyboard can shift window.scrollY)
+    const reset = () => {
+      el.scrollTop = 0
+      window.scrollTo(0, 0)
+      document.documentElement.scrollTop = 0
+    }
+    reset()
     requestAnimationFrame(() => {
-      el.scrollTo(0, 0)
-      setTimeout(() => el.scrollTo(0, 0), 100)
-      setTimeout(() => el.scrollTo(0, 0), 350)
+      reset()
+      setTimeout(reset, 100)
+      setTimeout(reset, 400)
     })
   }, [])
 

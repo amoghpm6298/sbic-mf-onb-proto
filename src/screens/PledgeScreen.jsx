@@ -46,7 +46,9 @@ function OtpInput({ onComplete }) {
       }
       const full = next.join('')
       if (full.length === OTP_LENGTH && !next.includes('')) {
-        setTimeout(() => onComplete(full), 80)
+        // Dismiss keyboard before completing so iOS resets viewport
+        if (document.activeElement) document.activeElement.blur()
+        setTimeout(() => onComplete(full), 350)
       }
       return next
     })
@@ -77,7 +79,8 @@ function OtpInput({ onComplete }) {
     const lastFilled = Math.min(text.length, OTP_LENGTH - 1)
     setTimeout(() => focusAt(lastFilled), 0)
     if (text.length === OTP_LENGTH) {
-      setTimeout(() => onComplete(text), 80)
+      if (document.activeElement) document.activeElement.blur()
+      setTimeout(() => onComplete(text), 350)
     }
   }, [focusAt, onComplete])
 
