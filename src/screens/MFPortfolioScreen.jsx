@@ -527,7 +527,12 @@ export default function MFPortfolioScreen({ direction, selectedFunds, setSelecte
           </div>
         </motion.div>
 
-        <div className="section-title" style={{ marginTop: 20 }}>Your Mutual Funds</div>
+        <div className="pledge-all-units-note">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#1FA8E1" strokeWidth="1"/><path d="M6 4v2.5M6 8h.01" stroke="#1FA8E1" strokeWidth="1" strokeLinecap="round"/></svg>
+          <span>All units of each selected fund will be pledged as security</span>
+        </div>
+
+        <div className="section-title" style={{ marginTop: 16 }}>Your Mutual Funds</div>
 
         <div className="fund-list">
           {MF_PORTFOLIO.map((fund, i) => {

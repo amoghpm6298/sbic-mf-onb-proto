@@ -223,6 +223,11 @@ export default function PledgeScreen({ direction, selectedFunds, creditLimit, on
           ))}
         </div>
 
+        <div className="nav-disclaimer">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#ca8a04" strokeWidth="1"/><path d="M6 4v2.5M6 8.5h.01" stroke="#ca8a04" strokeWidth="1" strokeLinecap="round"/></svg>
+          <span>Credit limit is based on today's NAV and may be revised if fund values change significantly. Future SIP installments are not automatically included.</span>
+        </div>
+
         <div className="pledge-explainer">
           <div className="pe-title">What happens to your funds?</div>
           <div className="pe-row">
