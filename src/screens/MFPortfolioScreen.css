@@ -312,6 +312,7 @@
   justify-content: flex-end;
   gap: 5px;
   margin-bottom: 2px;
+  white-space: nowrap;
 }
 
 /* override the global ps-label margin when inside label-row */

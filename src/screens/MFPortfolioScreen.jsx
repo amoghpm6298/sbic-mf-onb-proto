@@ -478,7 +478,7 @@ export default function MFPortfolioScreen({ direction, selectedFunds, setSelecte
           </div>
           <div className="ps-right">
             <div className="ps-label-row">
-              <div className="ps-label">Selected Credit Limit</div>
+              <div className="ps-label">Your Credit Limit</div>
               <InfoIcon onClick={() => showInfo('creditLimit')} />
             </div>
             <motion.div
